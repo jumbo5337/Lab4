@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="300.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.SecondDecorationController">
+    <children>
+        <GridPane fx:id="gridPane" hgap="5.0" layoutX="31.0" layoutY="58.0" styleClass="gridPane"  vgap="3.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="90.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="0.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="lable" text="F1[k=1]" />
+                <TextField fx:id="text" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin></TextField>
+            </children>
+        </GridPane>
+        <Label layoutX="31.0" layoutY="14.0" prefHeight="17.0" prefWidth="555.0" text="2. Укажите плотности распределения вероятностей для каждого сервиса" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <HBox layoutX="25.0" layoutY="48.0">
+            <children>
+                <Button fx:id="back" mnemonicParsing="false" onAction="#back"  text="Назад">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="next" mnemonicParsing="false" onAction="#probabilityDistribution" styleClass="bu" text="Далее" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
+
+
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="300.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.ThirdDecorationController">
+    <children>
+        <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="25.0" layoutY="54.0" prefHeight="30.0" prefWidth="410.0" styleClass="gridPane"  AnchorPane.bottomAnchor="316.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="100.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="20.0" percentHeight="0.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="И" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin></Label>
+                <Label text="ИЛИ" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin></Label>
+                <Label contentDisplay="CENTER" text="TEMP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin></Label>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </GridPane>
+        <Label layoutX="25.0" layoutY="20.0" prefHeight="17.0" prefWidth="550.0" text="3. Результаты" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="schedule" layoutX="15.0" layoutY="100.0" maxHeight="315.0" maxWidth="550.0" prefHeight="315.0" prefWidth="550.0"  AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="85.0" />
+        <HBox layoutX="39.0" layoutY="50.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="50.0">
+            <children>
+             <Button fx:id="inputBut" mnemonicParsing="true" onAction="#visibleInput" text="Исходные данные">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+              <Button fx:id="resultBut" mnemonicParsing="true" onAction="#visibleResult" text="Результат">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="shedBut" mnemonicParsing="true" onAction="#visibleSchedule" text="График" />
+            </children>
+        </HBox>
+        <GridPane fx:id="inputInfo" gridLinesVisible="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="100.0">
+            <columnConstraints>
+                <ColumnConstraints  hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </children>
+</AnchorPane>
