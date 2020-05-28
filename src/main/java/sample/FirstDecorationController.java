@@ -73,7 +73,7 @@ public class FirstDecorationController  {
                 System.out.println(services.size());
 
             }
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("secondDecorationController.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("secondDecorationController.fxml"));
             Parent root = loader.load();
             SecondDecorationController controller = loader.getController();; //получаем контроллер для второй формы
             controller.showGridPane(); // передаем необходимые параметры
@@ -116,7 +116,7 @@ public class FirstDecorationController  {
     }
 
     public void switchToMarkov(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("marcovChainController.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("marcovChainController.fxml"));
         Parent root = loader.load();
         MarcovChainController controller = loader.getController();; //получаем контроллер для второй формы
         controller.showGridPane(); // передаем необходимые параметры

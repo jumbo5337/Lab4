@@ -13,12 +13,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.util.HashSet;
-import java.util.Objects;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Set;
 
 public class SecondDecorationController {
     @FXML
@@ -151,7 +147,7 @@ public class SecondDecorationController {
             }
             if(sumProbabilityDensity()){
                // this.mainApp.setThirdDecoration();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("thirdDecorationController.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("thirdDecorationController.fxml"));
                 Parent root = loader.load();
                 ThirdDecorationController controller = loader.getController();; //получаем контроллер для второй формы
                 controller.showResult(); // передаем необходимые параметры
@@ -215,7 +211,7 @@ public class SecondDecorationController {
     private void back()throws IOException{
         FirstDecorationController.services.clear();
         //this.mainApp.setFirstDecoration();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("firstDecorationController.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("firstDecorationController.fxml"));
         Parent root = loader.load();
        // FirstDecorationController controller = loader.getController();; //получаем контроллер для второй формы
         Stage stage = new Stage();

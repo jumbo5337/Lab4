@@ -35,16 +35,15 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.python</groupId>
-            <artifactId>jython</artifactId>
-            <version>2.7.0</version>
-        </dependency>
     </dependencies>
 <repositories>
     <repository>
         <id>jet-brains</id>
         <url>https://kotlin.bintray.com/kotlin-numpy</url>
+    </repository>
+    <repository>
+        <id>JCenter</id>
+        <url>https://jcenter.bintray.com/</url>
     </repository>
 </repositories>
 
